@@ -2,7 +2,6 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: source-lister
-  namespace: tektontutorial
 spec:
   params:
     - default: 'https://github.com/redhat-scholars/tekton-tutorial-greeter'
