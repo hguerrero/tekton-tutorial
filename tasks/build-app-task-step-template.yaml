@@ -85,6 +85,9 @@ spec:
           value: /home/tekton
       workingDir: "/workspace/source/$(params.contextDir)"
     - name: build-and-push-image
+      securityContext:
+        capabilities:
+          add: ["SETFCAP"]      
       image: quay.io/buildah/stable
       script: |
         #!/usr/bin/env bash
